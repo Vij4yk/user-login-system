@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 var Schema = mongoose.Schema;
 
-mongoose.connect('mongodb://localhost/user-login-system');
+mongoose.connect(process.env.MONGODB_URI);
 
 var db = mongoose.connection;
 
